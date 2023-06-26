@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.module5friendsbook.HelloController">
+   <children>
+      <TabPane prefHeight="415.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Add Friend">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER_RIGHT" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+                           <children>
+                              <Label text="Name: ">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                              <Label text="Sex: ">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Mobile: ">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="114.0" layoutY="14.0" prefHeight="200.0" prefWidth="100.0" spacing="12.0">
+                           <children>
+                              <TextField fx:id="textGetName" promptText="Name" />
+                              <TextField fx:id="textGetSex" promptText="Sex (f/m)" />
+                              <TextField fx:id="textGetMobile" promptText="Mobile" />
+                           </children></VBox>
+                        <Button layoutX="273.0" layoutY="102.0" mnemonicParsing="false" onAction="#addFriend" text="Add Friend" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Display Members">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="membersList" layoutX="14.0" layoutY="14.0" onMouseClicked="#displayFriends" prefHeight="341.0" prefWidth="209.0" />
+                        <Label layoutX="237.0" layoutY="14.0" text="Member Information">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="285.0" layoutY="61.0" text="Sex: " />
+                        <Label layoutX="285.0" layoutY="78.0" text="Mobile: " />
+                        <Label fx:id="lblName" layoutX="344.0" layoutY="44.0" />
+                        <Label fx:id="lblSex" layoutX="344.0" layoutY="61.0" />
+                        <Label fx:id="lblMobile" layoutX="344.0" layoutY="78.0" />
+                        <Label layoutX="285.0" layoutY="44.0" text="Name: " />
+                        <Button fx:id="btnShowAll" layoutX="237.0" layoutY="117.0" mnemonicParsing="false" onAction="#allFriendsFile" text="Create All Friends File" />
+                        <Button fx:id="btbLoadAll" layoutX="406.0" layoutY="117.0" mnemonicParsing="false" onAction="#loadAllFriendsFile" text="Load All Friends File" />
+                        <Label fx:id="lblAllFriends" layoutX="255.0" layoutY="238.0" prefHeight="116.0" prefWidth="306.0" />
+                        <Button layoutX="455.0" layoutY="201.0" mnemonicParsing="false" onAction="#loadGenderFile" prefHeight="26.0" prefWidth="69.0" text="Load" />
+                        <Button layoutX="238.0" layoutY="159.0" mnemonicParsing="false" onAction="#genderFiles" text="Create Gender Files" />
+                        <TextField fx:id="txtChooseGender" layoutX="245.0" layoutY="202.0" prefHeight="26.0" prefWidth="184.0" promptText="Choose Gender File (Enter f/m)" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>
