@@ -101,7 +101,7 @@ public class HelloController {
         while (rs.next()) {
             if (Objects.equals(rs.getString("sex"), "f")) {
                 fileW = new FileOutputStream("/Users/bettybao/Documents/GitHub/Module5-friendsBook/allFemaleMembers", true);
-                String str = "Name: " + rs.getString("name") + "\tSex: " + rs.getString("sex") +
+                String str = "\nName: " + rs.getString("name") + "\tSex: " + rs.getString("sex") +
                         "\tMobile" + rs.getString("mobile");
                 byte[] b = str.getBytes();
                 fileW.write(b);
@@ -109,7 +109,7 @@ public class HelloController {
                 System.out.println("file saved.");
             } else {
                 fileW = new FileOutputStream("/Users/bettybao/Documents/GitHub/Module5-friendsBook/allMaleMembers", true);
-                String str = "Name: " + rs.getString("name") + "\tSex: " +
+                String str = "\nName: " + rs.getString("name") + "\tSex: " +
                         rs.getString("sex") + "\tMobile" + rs.getString("mobile");
                 byte[] b = str.getBytes();
                 fileW.write(b);
